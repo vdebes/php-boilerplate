@@ -1,0 +1,15 @@
+{
+    "name": "vdebes/php-boilerplate",
+    "description": "PHP project starting point with commonly used tools preconfigured",
+    "type": "project",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "vdebes",
+            "email": "vdebes@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+    }
+}
