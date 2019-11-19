@@ -12,10 +12,14 @@
     "autoload": {
         "psr-4": {
             "vdebes\\phpboilerplate\\": "src"
+        },
+        "psr-0": {
+            "": "tests"
         }
     },
     "require": {},
     "require-dev": {
-        "phpunit/phpunit": "^8.4"
+        "phpunit/phpunit": "^8.4",
+        "phpstan/phpstan": "^0.11.19"
     }
 }
