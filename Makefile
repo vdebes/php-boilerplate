@@ -15,8 +15,8 @@ static: ## Runs static analysis
 
 .PHONY: cs
 cs:
-	vendor/bin/php-cs-fixer fix --dry-run --stop-on-violation --diff
+	vendor/bin/phpcs
 
 .PHONY: cs-fix
 cs-fix: ## Runs Codestyle Fixer
-	vendor/bin/php-cs-fixer fix
+	vendor/bin/phpcbf
