@@ -15,7 +15,7 @@ static: ## Runs static analysis
 
 .PHONY: cs
 cs:
-	vendor/bin/phpcs
+	vendor/bin/phpcs -s
 
 .PHONY: cs-fix
 cs-fix: ## Runs Codestyle Fixer
