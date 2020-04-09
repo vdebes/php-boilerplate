@@ -9,3 +9,4 @@ quality assessment tools I use on a daily basis.
 
 * Unit testing with [PHP-Unit](https://github.com/sebastianbergmann/phpunit)
 * Static analysis with [PHPStan](https://github.com/phpstan/phpstan)
+* Codestyle checker and fixer with [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
