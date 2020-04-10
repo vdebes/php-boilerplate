@@ -12,6 +12,7 @@ unit: ## Runs unit tests
 .PHONY: static
 static: ## Runs static analysis
 	vendor/bin/phpstan analyse src tests
+	vendor/bin/phpmd src,tests text rules.xml
 
 .PHONY: cs
 cs:
