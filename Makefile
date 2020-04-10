@@ -13,6 +13,7 @@ unit: ## Runs unit tests
 static: ## Runs static analysis
 	vendor/bin/phpstan analyse src tests
 	vendor/bin/phpmd src,tests text rules.xml
+	vendor/bin/phpinsights --config-path=phpinsights.php -n
 
 .PHONY: cs
 cs:

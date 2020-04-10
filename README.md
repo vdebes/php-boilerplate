@@ -12,5 +12,6 @@ quality assessment tools I use on a daily basis.
 ## Static analysis
 * Static analysis with [PHPStan](https://github.com/phpstan/phpstan)
 * Suboptimal code detection with [PHPMD](https://github.com/phpmd/phpmd)
+* Quality analysis and metrics with [PHPInsights]()
 ## Coding standards
 * Codestyle checker and fixer with [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)

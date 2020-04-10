@@ -2,7 +2,7 @@
     "name": "vdebes/php-boilerplate",
     "description": "PHP project starting point with commonly used tools preconfigured",
     "type": "project",
-    "license": "GPLv3",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "vdebes",
@@ -27,6 +27,7 @@
         "phpstan/phpstan": "^0.12",
         "phpstan/phpstan-phpunit": "^0.12.6",
         "squizlabs/php_codesniffer": "^3.5",
-        "phpmd/phpmd": "^2.8"
+        "phpmd/phpmd": "^2.8",
+        "nunomaduro/phpinsights": "^1.14"
     }
 }
