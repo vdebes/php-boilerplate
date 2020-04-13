@@ -16,11 +16,6 @@ unit: ## Runs unit tests
 	$(call printSection,PHP UNIT)
 	vendor/bin/phpunit tests
 
-.PHONY: coverage
-coverage: ## Runs unit tests
-	$(call printSection,UNIT TESTS COVERAGE REPORTING)
-	vendor/bin/phpunit tests
-
 .PHONY: static
 static: ## Runs static analysis
 	$(call printSection,PHP STAN ANALYSIS)
@@ -30,10 +25,12 @@ static: ## Runs static analysis
 	$(call printSection,PHP INSIGHTS ANALYSIS)
 	vendor/bin/phpinsights --config-path=phpinsights.php -n # Analyses only src - waiting for v2
 
-.PHONY: metric
-metric: ## Runs metrics reports generation
+.PHONY: metrics
+metrics: ## Runs code coverage and metrics reports generation
+	$(call printSection,UNIT TESTS COVERAGE REPORTING)
+	vendor/bin/phpunit tests --coverage-html reports/coverage
 	$(call printSection,PHPLOC METRICS)
-	vendor/bin/phploc src tests
+	vendor/bin/phploc src tests > reports/metrics.txt && cat reports/metrics.txt
 
 .PHONY: cs
 cs:
