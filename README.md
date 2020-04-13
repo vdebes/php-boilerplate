@@ -7,7 +7,12 @@
 A starting point for a coding dojo or a small personal project. There is no web framework included, but most of the 
 quality assessment tools I use on a daily basis.
 
-Type ```make help``` in terminal to get the list of commands available through the Makefile. 
+## Commands to get started
+In a terminal :
+
+```composer create-project vdebes/php-boilerplate myApp --remove-vcs ``` 
+
+```make help```
 
 ## Tests
 * Unit testing with [PHP-Unit](https://github.com/sebastianbergmann/phpunit)
