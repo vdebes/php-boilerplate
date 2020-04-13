@@ -16,6 +16,11 @@ unit: ## Runs unit tests
 	$(call printSection,PHP UNIT)
 	vendor/bin/phpunit tests
 
+.PHONY: coverage
+coverage: ## Runs unit tests
+	$(call printSection,UNIT TESTS COVERAGE REPORTING)
+	vendor/bin/phpunit tests
+
 .PHONY: static
 static: ## Runs static analysis
 	$(call printSection,PHP STAN ANALYSIS)
