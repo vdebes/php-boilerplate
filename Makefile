@@ -26,18 +26,18 @@ static: ## Runs static analysis
 	vendor/bin/phpinsights --config-path=phpinsights.php -n # Analyses only src - waiting for v2
 
 .PHONY: metrics
-metrics: ## Runs code coverage and metrics reports generation
+metrics: ## Generates code coverage and metrics reports
 	$(call printSection,UNIT TESTS COVERAGE REPORTING)
 	vendor/bin/phpunit tests --coverage-html reports/coverage
 	$(call printSection,PHPLOC METRICS)
 	vendor/bin/phploc src tests > reports/metrics.txt && cat reports/metrics.txt
 
 .PHONY: cs
-cs:
+cs: ## Checks the codestyle
 	$(call printSection,CODE STYLE CHECKING)
 	vendor/bin/phpcs -s
 
 .PHONY: cs-fix
-cs-fix: ## Runs Codestyle Fixer
+cs-fix: ## Automatically fixes the code style whenever possible
 	$(call printSection,CODE STYLE FIXING)
 	vendor/bin/phpcbf

@@ -7,6 +7,8 @@
 A starting point for a coding dojo or a small personal project. There is no web framework included, but most of the 
 quality assessment tools I use on a daily basis.
 
+Type ```make help``` in terminal to get the list of commands available through the Makefile. 
+
 ## Tests
 * Unit testing with [PHP-Unit](https://github.com/sebastianbergmann/phpunit)
 ## Static analysis
