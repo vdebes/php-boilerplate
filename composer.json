@@ -3,6 +3,8 @@
     "description": "PHP project starting point with commonly used tools preconfigured",
     "type": "project",
     "license": "GPL-3.0-or-later",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "vdebes",
