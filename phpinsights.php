@@ -5,7 +5,6 @@ declare(strict_types=1);
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Preset
@@ -91,5 +90,4 @@ return [
         'min-style' => 80,
         'disable-security-check' => false,
     ],
-
 ];
