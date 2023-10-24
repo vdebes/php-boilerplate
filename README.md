@@ -12,15 +12,13 @@ In a terminal :
 
 ```composer create-project vdebes/php-boilerplate myApp --remove-vcs ``` 
 
-```make help```
-
 ## Tests
-* Unit testing with [PHP-Unit](https://github.com/sebastianbergmann/phpunit)
+* Unit testing with [PHP-Unit](https://github.com/sebastianbergmann/phpunit) ran at pre-commit, can be run with coverage
+ generation with ```composer run test-coverage```
 ## Static analysis
-* Static analysis with [PHPStan](https://github.com/phpstan/phpstan)
-* Suboptimal code detection with [PHPMD](https://github.com/phpmd/phpmd)
-* Quality analysis and metrics with [PHPInsights]()
-## Metrics
-* Project metrics with [PHPLoC](https://github.com/sebastianbergmann/phploc)
+* Static analysis with [PHPStan](https://github.com/phpstan/phpstan) ran at pre-commit
+## Quality metrics
+* Project quality with [PHPInsights](https://github.com/nunomaduro/phpinsights) ran at pre-push
 ## Coding standards
-* Codestyle checker and fixer with [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+* Codestyle checker and fixer with [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) ran at pre-commit, some
+ errors can be fixed with ```composer run csfix```

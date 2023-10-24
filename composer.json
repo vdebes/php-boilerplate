@@ -27,26 +27,34 @@
     "require-dev": {
         "phpunit/phpunit": "^10",
         "phpstan/phpstan": "^1.10",
-        "friendsofphp/php-cs-fixer": "^3.35"
+        "friendsofphp/php-cs-fixer": "^3.35",
+        "nunomaduro/phpinsights": "^2.9"
     },
     "scripts": {
         "post-install-cmd": [
             "cp -rf .github/hooks/* .git/hooks"
         ],
         "test-coverage": [
-            "php -dxdebug.mode=coverage bin/phpunit --coverage-clover coverage.xml"
+            "php -dxdebug.mode=coverage vendor/bin/phpunit --coverage-clover coverage.xml"
         ],
         "test-unit": [
-            "php -dxdebug.mode=coverage bin/phpunit --testdox"
+            "php -dxdebug.mode=coverage vendor/bin/phpunit --testdox"
         ],
         "pre-commit": [
             "vendor/bin/php-cs-fixer check",
-            "vendor/bin/phpstan analyze src --configuration=phpstan.dist.neon",
+            "vendor/bin/phpstan analyze src --configuration=phpstan.neon",
             "@test-unit"
         ],
         "csfix": [
             "vendor/bin/php-cs-fixer fix"
         ],
-        "pre-push": []
+        "pre-push": [
+            " vendor/bin/phpinsights --no-interaction"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
