@@ -32,7 +32,7 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "cp -rf .github/hooks/* .git/hooks"
+            "bash .github/hooks/install.bash"
         ],
         "test-coverage": [
             "php -dxdebug.mode=coverage vendor/bin/phpunit --coverage-clover coverage.xml"
