@@ -5,6 +5,11 @@ namespace phpboilerplate\tests;
 use PHPUnit\Framework\TestCase;
 use vdebes\phpboilerplate\Foo;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class FooTest extends TestCase
 {
     public function testBar(): void
